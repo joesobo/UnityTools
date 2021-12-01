@@ -8,7 +8,7 @@ using static UnityEditor.AssetDatabase;
 public static class DefaultVSCodeSetup {
 
     [MenuItem("Tools/Setup/Create Default Folders")]
-    public static void CreateDefaultFolders() {
+    static void CreateDefaultFolders() {
         CreateGitIgnore();
         CreateVSCodeSettings();
         CreateOmniSharpSettings();
@@ -16,15 +16,15 @@ public static class DefaultVSCodeSetup {
         Refresh();
     }
 
-    public static void CreateGitIgnore() {
+    static void CreateGitIgnore() {
         
     }
 
-    public static void CreateVSCodeSettings() {
+    static void CreateVSCodeSettings() {
         
     }
 
-    public static void CreateOmniSharpSettings() {
+    static void CreateOmniSharpSettings() {
         
     }
 }

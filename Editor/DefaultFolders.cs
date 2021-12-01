@@ -8,13 +8,13 @@ using static UnityEditor.AssetDatabase;
 public static class DefaultFolders {
     
     [MenuItem("Tools/Setup/Create Default Folders")]
-    public static void CreateDefaultFolders() {
+    static void CreateDefaultFolders() {
         CreateDirectories("", "Scripts", "Scenes", "Prefabs", "Materials", "Shaders", "Editor", "Plugins");
 
         Refresh();
     }
 
-    public static void CreateDirectories(string root, params string[] dir) {
+    static void CreateDirectories(string root, params string[] dir) {
         string fullPath = Combine(dataPath, root);
 
         foreach (string newDir in dir) {
