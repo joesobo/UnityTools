@@ -5,7 +5,7 @@ using static System.IO.Path;
 using static UnityEngine.Application;
 using static UnityEditor.AssetDatabase;
 
-public static class ToolsMenu {
+public static class DefaultFolders {
     
     [MenuItem("Tools/Setup/Create Default Folders")]
     public static void CreateDefaultFolders() {
