@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp -r ./Assets/* ../UnityPackages/Tools
+mkdir ../UnityPackages/Tools && cp -r ./Assets/* ../UnityPackages/Tools
