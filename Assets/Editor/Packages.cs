@@ -11,6 +11,12 @@ public static class Packages {
         ReplacePackageFile(contents);
     }
 
+    public static async Task ReplaceGitIgnoreFromGist(string id, string user = "joesobo") {
+        var url = GetGistUrl(id, user);
+        var contents = await GetContents(url);
+        ReplaceGitIgnoreFile(contents);
+    }
+
     static string GetGistUrl(string id, string user = "joesobo") => $"https://gist.github.com/{user}/{id}/raw";
 
     static async Task<string> GetContents(string url) {
@@ -22,6 +28,12 @@ public static class Packages {
 
     static void ReplacePackageFile(string content) {
         var existing = Path.Combine(Application.dataPath, "../Packages/manifest.json");
+        File.WriteAllText(existing, content);
+        UnityEditor.PackageManager.Client.Resolve();
+    }
+
+    static void ReplaceGitIgnoreFile(string content) {
+        var existing = Path.Combine(Application.dataPath, "../.gitignore");
         File.WriteAllText(existing, content);
         UnityEditor.PackageManager.Client.Resolve();
     }
