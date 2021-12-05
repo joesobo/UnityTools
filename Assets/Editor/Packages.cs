@@ -24,6 +24,12 @@ public static class Packages {
         ReplaceFile(contents, "../omnisharp.json");
     }
 
+    public static async Task ReplaceVSCodeSettings(string user = "joesobo") {
+        var url = GetGistUrl("f0eef398b1e5793d4c8e3c8c536fbbf4", user);
+        var contents = await GetContents(url);
+        ReplaceFile(contents, "../.vscode/settings.json");
+    }
+
     static string GetGistUrl(string id, string user = "joesobo") => $"https://gist.github.com/{user}/{id}/raw";
 
     static async Task<string> GetContents(string url) {

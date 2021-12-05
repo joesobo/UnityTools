@@ -19,6 +19,9 @@ public static class ToolsMenu {
     [MenuItem("Tools/Setup/Load/Load Omnisharp")]
     static async void LoadNewOmnisharp() => await ReplaceOmnisharp();
 
+    [MenuItem("Tools/Setup/Load/Load VSCode Settings")]
+    static async void LoadNewVSCodeSettings() => await ReplaceVSCodeSettings();
+
     [MenuItem("Tools/Setup/Packages/New Input System")]
     static void AddNewInputSystem() => InstallUnityPackage("inputsystem");
 
