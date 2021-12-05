@@ -55,5 +55,6 @@
 
         "Logs/":true,
         "UserSettings/":true,
+        "*.csproj":true,
     }
 }
