@@ -7,4 +7,19 @@ public static class FloatExtension {
         }
         return value;
     }
+
+    public static float Max(this float value, float max) {
+        if (value > max) {
+            value = max;
+        }
+        return value;
+    }
+
+    public static float Round(this float value) {
+        return Mathf.Round(value);
+    }
+
+    public static float RoundToNearest(this float value, float nearest) {
+        return Round(value / nearest) * nearest;
+    }
 }
