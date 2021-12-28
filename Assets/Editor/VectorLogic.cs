@@ -9,10 +9,7 @@ public static class VectorLogic {
     }
 
     public static Vector3 RoundToNearest(this Vector3 v, float nearest) {
-        v.x = RoundTo(v.x, nearest);
-        v.y = RoundTo(v.y, nearest);
-        v.z = RoundTo(v.z, nearest);
-        return v;
+        return Round(v / nearest) * nearest;
     }
 
     public static Vector3 RoundToPolarCoords(this Vector3 v, float radius, float angle) {
@@ -21,9 +18,4 @@ public static class VectorLogic {
 
         return new Vector3(newX, 0, newZ);
     }
-
-    public static float RoundTo(float value, float multipleOf) {
-        return Mathf.Round(value / multipleOf) * multipleOf;
-    }
-
 }

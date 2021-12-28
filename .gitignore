@@ -77,3 +77,5 @@ crashlytics-build.properties
 /node_modules/
 package-lock.json
 yarn.lock
+
+/[Aa]ssets/Plugins/*
